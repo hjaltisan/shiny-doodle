@@ -5,6 +5,7 @@ module.exports = {
     asar: { unpack: '*.{node,dll,lib,dylib,so}' },
     osxSign: {
       identity,
+      optionsForFile: () => ({ entitlements: './entitlements.plist' }),
     },
   },
 };
